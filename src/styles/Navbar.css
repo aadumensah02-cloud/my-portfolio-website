@@ -1,0 +1,48 @@
+.navbar {
+    background: var(--nav);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 16px 0;
+    color: var(--);
+
+}
+
+.menu-btn {
+    display: none;
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.nav-list a {
+  text-decoration: underline;
+  text-decoration-color: transparent; /* invisible at first */
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px; /* space below text */
+  transition: text-decoration-color 0.3s ease, text-underline-offset 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: var(--hover);
+  text-decoration-color: #4a1420; /* burgundy accent */
+  text-underline-offset: 6px; /* pushes underline down slightly */
+}
+
+.logo {
+    font-family: var(--name);
+    font-size: 20px;
+}
