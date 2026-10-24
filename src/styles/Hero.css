@@ -1,4 +1,68 @@
-.hero {
+.hero-grid {
     color: var(--text-body);
-    padding-top:190px; 
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: minmax(240px, 540px) 1fr;
+    /* gap: 48px; */
+    align-items: center;
+}
+
+.profile-carousel {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+/* Portrait frame for the profile pictures and videos */
+.profile-carousel .carousel-viewport {
+    aspect-ratio: 1 / 1;
+}
+
+.profile-carousel .carousel-slide img {
+    object-position: center top; /* keeps faces from being cropped */
+}
+
+.hero-text p {
+    /* width: 100%; */
+    /* color: var(--text-body, #5c5040); */
+}
+
+.hero-name {
+    font-family: var(--name);
+    font-size: 50px;
+    padding: 0px;
+    margin: 0;
+}
+
+.hero-span {
+    display: flex;
+    align-items: center;   /* vertically centers the line with the text */
+    gap: 12px;             /* space between the line and the word "Portfolio" */
+}
+
+.hero-span::before {
+    content: "";
+    flex: 0.05;
+    height: 1px;
+    background: var(--hover);
+}
+
+.hero-text .btn {
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.hero-description {
+    color: var(--border);
+    margin: 0;
+    margin-bottom: 25px;
+}
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-carousel {
+        max-width: 320px;
+        margin: 0 auto;
+    }
 }

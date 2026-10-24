@@ -1,28 +1,37 @@
 import "../styles/Hero.css";
+import Carousel from "./Carousel";
+import { profileMedia } from "../data/profile";
 
 const Hero: React.FC = () => {
     return (
-        <section id="#home" className="hero">
-            <div className="hero-text">
-                <span className="hero-span">Portfolio</span>
-                <h1>Ama Adu-Mensah</h1>
-                <p>Building systems and solutions to bridge the gap between innovation and technology </p>
-                <p>
-                    I'm a budding React devloper with a growing passion for building clean, responsive
-                    user-friendly experiemces. I enjoy tackling layout challenges, wiring up componenets, and
-                    experimenting with styling to make designs come alive. My curiosity drives me to learn 
-                    step-by-step, and I thrive when I can see my progress refkected in a working UI.
-                </p>
-                <button 
-                className="hero-button"
-                aria-label="profile-button"
-                role="button">
-                    Get to know me
-                </button> 
-            </div>
+        <section id="#home" className="dark">
+            <div className="container hero-grid">
+                <div className="hero-text">
+                    <div className="hero-span">
+                    <span>Portfolio</span>
+                    </div>
+                    
+                    <h1 className="hero-name">Ama Adu-Mensah</h1>
+                    <p className="hero-description">Building solutions to bridge the gap between innovation and technology </p>
+                    <p>
+                        I'm a budding React devloper with a growing passion for building clean, responsive
+                        user-friendly experiemces. I enjoy tackling layout challenges, wiring up componenets, and
+                        experimenting with styling to make designs come alive.
+                    </p>
+                    <button 
+                    className="btn"
+                    aria-label="profile-button"
+                    role="button">
+                        Get to know me
+                    </button> 
+                </div>
 
-            <div className="hero-img">
-              <img src="" alt="" />
+                <Carousel
+                    items={profileMedia}
+                    label="Photos and video of Ama"
+                    className="profile-carousel"
+                    interval={5000}
+                />
             </div>
         </section>
     )

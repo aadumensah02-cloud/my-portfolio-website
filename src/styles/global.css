@@ -1,14 +1,20 @@
 :root {
-    --bg: #4a1420;
+    /* --bg: #4a1420;
     --nav: #f1f3f2;
     --text: #0a0a08;
     --text-body: #f1f3f2;
     --accent: #4a1420;
     --border: #a89080;
-    --edge: 30px;
+    --edge-portfolio: 30px;
+    --edge: 50px; */
+    --burgundy: #4a1420;
+    --off-white: #f1f3f2;
+    --near-black: #0a0a08;
+    --brown-gray: #5c5040;
+    --taupe: #a89080;
     --max: 1100px;
     --hover: #5c5040;
-    --name: "Source Serif 4", Georgia, serif;
+    --name: "Dancing Script", cursive;
 
 }
 
@@ -24,26 +30,66 @@ html {
 body {
     margin: 0;
     font-family: "Quicksand", sans-serif;
-    background: var(--bg);
     line-height: 1.6;
 }
 
 section {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 96px var(--edge) 0;
+    padding: 77px 24px 31px 24px;
     scroll-margin-top: 70px;
 }
 
-a:focus-visible, button:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-h3 ,h2 , h1 {
-    color: var(--text-body);
+.dark {
+    background: var(--burgundy);
+    color: var(--off-white);
+}
+
+.light {
+    background: var(--off-white);
+    color: var(--brown-gray);
+}
+
+.light h1,
+.light h2,
+.light h3 {
+    color: var(--near-black);
+    font-family: var(--name);
+}
+
+a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--burgundy);
+    outline-offset: 2px;
 }
 
 p {
     color: var(--text-body);
+}
+
+.dark .btn {
+    padding: 10px 20px;
+    background: var(--off-white);
+    color: var(--burgundy);
+    border: 2px solid var(--off-white);
+}
+
+.light .btn {
+    background: var(--burgundy);
+    color: var(--off-white);
+    border: 2px solid var(--burgundy);
+}
+
+@media (hover: hover) {
+    .dark .btn:hover {
+        background: var(--taupe);
+        border-color: var(--taupe);
+        color: var(--near-black);
+    }
+    .light .btn:hover {
+        background: var(--near-black);
+        border-color: var(--near-black);
+    }
 }
